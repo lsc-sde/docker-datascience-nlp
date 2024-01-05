@@ -19,6 +19,4 @@ RUN mamba env update --quiet -f environment.yaml \
     && fix-permissions "${CONDA_DIR}" \
     && fix-permissions "/home/${NB_USER}"
 
-RUN apt-get uninstall --yes build-essential
-
 USER ${NB_USER}
